@@ -1,42 +1,229 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  margin: 0;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(48, 110, 22, 1) 100%
+  );
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+header img {
+  width: 150px;
+  height: 150px;
+  margin-left: 50px;
+}
+
+header .header__nav a {
+  margin-right: 50px;
+  color: rgba(48, 110, 22, 1);
+  font-size: 30px;
+  text-decoration: none;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* function createEmployee() {
+
+  const saveEmployee = () => {
+      console.log("Employee created")
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+  return (
+      <div className="create">
+          <h2>Create Employee</h2>
+          <form action="#" id="create-employee">
+              <div className="profile-infos">
+                  <label htmlFor="first-name">First Name</label>
+                  <input type="text" name="first-name" id="first-name" />
+
+                  <label htmlFor="last-name">Last Name</label>
+                  <input type="text" name="last-name" id="last-name" />
+
+                  <label htmlFor="date-of-birth">Date of Birth</label>
+                  <input type="date" name="date-of-birth" id="date-of-birth" />
+
+                  <label htmlFor="start-date">Start Date</label>
+                  <input type="text" name="start-date" id="start-date" />
+              </div>
+
+              <fieldset className="adress">
+                  <legend>Adress</legend>
+                  <label htmlFor="street">Street</label>
+                  <input type="text" name="street" id="street" />
+
+                  <label htmlFor="city">City</label>
+                  <input type="text" name="city" id="city" />
+
+                  <label htmlFor="state">State</label>
+                  <select name="state" id="state"></select>
+
+                  <label htmlFor="zip">Zip code</label>
+                  <input type="text" name="zip" id="zip" />
+              </fieldset>
+
+              <label htmlFor="department">Départment</label>
+              <select name="department" id="department">
+                  <option value="engineering">Engineering</option>
+                  <option value="marketing">Marketing</option>
+                  <option value="sales">Sales</option>
+                  <option value="hr">HR</option>
+              </select>
+
+              <button onClick={saveEmployee()}>Create</button>
+          </form>
+      </div>
+  )
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+export default createEmployee */
+
+.create {
+  width: 100%;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
-.card {
-  padding: 2em;
+.create form {
+  width: 50%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(84, 180, 113, 0.417);
+  border-radius: 10px;
+  padding: 50px;
 }
 
-.read-the-docs {
-  color: #888;
+.create form .profile-infos {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.create form .profile-infos label {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  width: 50%;
+}
+
+.create form .profile-infos input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  width: 50%;
+}
+
+.create form .profile-infos .picker {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.create form .adress {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.create form .adress label {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.create form .adress input {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.create form .adress select {
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.create form label {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.create form select {
+  width: 50%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.create form button {
+  width: 20px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(48, 110, 22, 1);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+
+.create form .create-button {
+  width: 200px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create fieldset {
+  width: 100%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.create fieldset legend {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.create form .adress input {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.create form .adress select {
+  width: 100%;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+}
+
+.create fieldset label {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
 }
