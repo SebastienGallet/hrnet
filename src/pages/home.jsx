@@ -16,13 +16,16 @@ function Home() {
 
   return (
     <div>
+      
       <Header onToggle={() => setShowList(!showList)} isListVisible={showList} />
-      {!showList ? (
-        <CreateEmployee onAddEmployee={addEmployee} />
-      ) : (
-        <EmployeeList employees={employees} />
-      )}
-      <Modal show={showModal} onClose={() => setShowModal(false)} /> 
+      <main>
+        {!showList ? (
+          <CreateEmployee onAddEmployee={addEmployee} />
+        ) : (
+          <EmployeeList employees={employees} />
+        )}
+        <Modal show={showModal} onClose={() => setShowModal(false)} /> 
+      </main>
     </div>
   );
 }

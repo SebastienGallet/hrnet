@@ -1,233 +1,140 @@
 body {
   margin: 0;
+  font-family: 'Arial', sans-serif; /* Example font */
+  background-color: #f4f4f4;
+}
+
+main {
+  padding: 50px;
 }
 
 header {
-  width: 100%;
   height: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(48, 110, 22, 1) 100%
-  );
+  background: rgba(48, 110, 22, 1);
+  padding: 0 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 header img {
-  width: 150px;
-  height: 150px;
-  margin-left: 50px;
+  max-width: 150px;
+  max-height: 150px;
 }
 
 header .header__nav a {
-  margin-right: 50px;
-  color: rgba(48, 110, 22, 1);
-  font-size: 30px;
+  color: white;
+  font-size: 24px;
   text-decoration: none;
-  background-color: white;
-  padding: 10px;
-  border-radius: 10px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  transition: background-color 0.3s;
 }
 
-.create {
-  width: 100%;
-  height: 900px;
+header .header__nav a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+input, select, button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(48, 110, 22, 0.6);
+  font-size: 18px;
+}
+
+button {
+  background-color: rgba(48, 110, 22, 1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: rgba(84, 180, 113, 1);
+}
+
+/* Create Employee section */
+.create, .list {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
+  padding: 50px 0;
+  background-color: #f4f4f4; 
 }
 
 .create form {
   width: 50%;
-  height: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgba(84, 180, 113, 0.417);
+  background-color: white; 
   border-radius: 10px;
   padding: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.create form .profile-infos {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.create form .profile-infos label {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-  width: 50%;
-}
-
-.create form .profile-infos input {
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  width: 50%;
-}
-
-.create form .profile-infos .picker {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
-}
-
-.create form .adress {
-  width: 50%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.create form .adress label {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.create form .adress input {
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-}
-
-.create form .adress select {
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-}
-
-.create form label {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.create form select {
-  width: 50%;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-}
-
-.create form button {
-  width: 20px;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-  background-color: rgba(48, 110, 22, 1);
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-}
-
-.create form .create-button {
-  width: 200px;
-  height: 50px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.create fieldset {
-  width: 100%;
-  height: 30%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.create fieldset legend {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.create form .adress input {
-  width: 100%;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-}
-
-.create form .adress select {
-  width: 100%;
-  height: 30px;
-  border-radius: 5px;
-  border: none;
-}
-
-.create fieldset label {
-  color: rgb(0, 0, 0);
-  font-size: 20px;
-}
-
-.react-datepicker__input-container {
-  position: relative;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-}
-
-.create form .profile-infos .picker {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-div > h2 {
-  text-align: center;
-  margin-bottom: 20px;
+.create label {
+  font-size: 18px;
   color: rgba(48, 110, 22, 1);
+  margin-bottom: 10px;
 }
 
-table {
+.create input, .create select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(48, 110, 22, 0.6);
+  font-size: 18px;
   width: 100%;
-  border-collapse: collapse;
+  box-sizing: border-box;
+  transition: border-color 0.3s;
+}
+
+.create input:focus, .create select:focus {
+  border-color: rgba(84, 180, 113, 1); 
+  outline: none; 
+}
+
+.create button {
+  background-color: rgba(48, 110, 22, 1);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
   margin-top: 20px;
 }
 
-table, th, td {
-  border: 1px solid rgba(48, 110, 22, 0.6);
+.create button:hover {
+  background-color: rgba(84, 180, 113, 1);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 thead {
   background-color: rgba(48, 110, 22, 0.6);
-  color: white;
 }
 
 th, td {
-  padding: 10px;
-  text-align: left;
+  padding: 15px;
+  border-bottom: 1px solid rgba(48, 110, 22, 0.2);
 }
 
-tbody tr:nth-child(odd) {
-  background-color: rgba(48, 110, 22, 0.1);
+tbody tr:last-child th, tbody tr:last-child td {
+  border-bottom: none; 
 }
 
 tbody tr:hover {
   background-color: rgba(84, 180, 113, 0.3);
-  cursor: pointer;
 }
 
-main {
-  padding: 20px;
-}
-
+/* Modals */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -242,7 +149,13 @@ main {
 
 .modal-content {
   background: white;
-  padding: 20px;
+  padding: 30px;
   border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 500px;
+}
+
+.react-datepicker-wrapper {
+  width: 100%;
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 function EmployeeList({ employees }) {
   return (
-    <div>
+    <div className="list">
       <h2>Employee List</h2>
       <table>
         <thead>
