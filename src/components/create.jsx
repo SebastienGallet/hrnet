@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import states from "./states";
+import PikadayPicker from "./pikadayPicker";
 
 function CreateEmployee({ onAddEmployee }) {
   const [dateOfBirth, setDateOfBirth] = useState(new Date());
@@ -37,19 +38,16 @@ function CreateEmployee({ onAddEmployee }) {
 
           <div className="picker">
             <label htmlFor="date-of-birth">Date of Birth</label>
-            <DatePicker
-              selected={dateOfBirth}
+            <PikadayPicker
+              value={dateOfBirth}
               onChange={(date) => setDateOfBirth(date)}
-              dateFormat="dd/MM/yyyy"
-              id="date-of-birth"
             />
 
+
             <label htmlFor="start-date">Start Date</label>
-            <DatePicker
-              selected={startDate}
-              onChange={(date) => setStartDate(date)}
-              dateFormat="dd/MM/yyyy"
-              id="start-date"
+            <PikadayPicker
+              value={dateOfBirth}
+              onChange={(date) => setDateOfBirth(date)}
             />
           </div>
         </div>
