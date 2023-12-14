@@ -11,8 +11,6 @@ const PikadayPicker = ({ value, onChange }) => {
       field: ref.current,
       onSelect: onChange,
     });
-
-
     return () => picker.destroy();
   }, [onChange]);
 
