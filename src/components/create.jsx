@@ -46,8 +46,8 @@ function CreateEmployee({ onAddEmployee }) {
 
             <label htmlFor="start-date">Start Date</label>
             <PikadayPicker
-              value={dateOfBirth}
-              onChange={(date) => setDateOfBirth(date)}
+              value={startDate}
+              onChange={(date) => setStartDate(date)}
             />
           </div>
         </div>
