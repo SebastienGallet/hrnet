@@ -4,6 +4,7 @@
 
 ### Prerequisites
 - Node.js 20 installed on your system.
+- VScode is recommanded
 
 ### Installation
 1. Clone the repository:
